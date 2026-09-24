@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Covers Only promo</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 1400px; height: 560px; margin: 0; overflow: hidden; }
+      body { font-family: Inter, system-ui, sans-serif; color: #fff; background: #0d0e12; }
+      .canvas { position: relative; display: flex; width: 100%; height: 100%; padding: 72px 88px; background: radial-gradient(circle at 78% 42%, rgba(255,70,92,.25), transparent 34%), radial-gradient(circle at 25% 110%, rgba(255,122,86,.18), transparent 38%); }
+      .copy { z-index: 2; width: 58%; }
+      .badge { display: inline-flex; align-items: center; gap: 9px; padding: 8px 13px; border: 1px solid rgba(255,255,255,.12); border-radius: 999px; color: #b7bbc5; background: rgba(255,255,255,.04); font-size: 14px; font-weight: 700; letter-spacing: .08em; }
+      .dot { width: 9px; height: 9px; border-radius: 50%; background: #66dda6; box-shadow: 0 0 0 5px rgba(102,221,166,.12); }
+      h1 { max-width: 720px; margin: 32px 0 20px; font-size: 72px; line-height: .94; letter-spacing: -.06em; }
+      h1 span { color: #ff5f68; }
+      p { max-width: 640px; margin: 0; color: #aeb3be; font-size: 23px; line-height: 1.45; }
+      .panel { position: absolute; top: 54px; right: 76px; width: 430px; padding: 22px; border: 1px solid rgba(255,255,255,.1); border-radius: 26px; background: rgba(27,29,35,.92); box-shadow: 0 34px 100px rgba(0,0,0,.42); transform: rotate(2deg); }
+      .panel-head { display: flex; align-items: center; gap: 13px; padding-bottom: 19px; }
+      .icon { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 14px; background: linear-gradient(145deg,#ff465c,#ff7a56); font-size: 16px; }
+      .panel h2 { flex: 1; margin: 0; font-size: 21px; }
+      .toggle { width: 50px; height: 29px; padding: 4px; border-radius: 999px; background: linear-gradient(90deg,#ff465c,#ff7a56); }
+      .toggle:after { display: block; width: 21px; height: 21px; margin-left: 21px; border-radius: 50%; background: #fff; content: ''; }
+      .track { display: grid; grid-template-columns: 70px 1fr 26px; align-items: center; gap: 13px; padding: 12px 0; border-top: 1px solid rgba(255,255,255,.07); }
+      .thumb { height: 44px; border-radius: 9px; background: linear-gradient(135deg,#2d3040,#565a6c); }
+      .track:nth-child(3) .thumb { background: linear-gradient(135deg,#5f3d50,#c66b68); }
+      .track:nth-child(4) .thumb { background: linear-gradient(135deg,#334b42,#70a889); }
+      .title { height: 9px; margin-bottom: 8px; border-radius: 9px; background: #e9eaf0; }
+      .sub { width: 62%; height: 7px; border-radius: 9px; background: #696e7a; }
+      .check { display: grid; width: 25px; height: 25px; place-items: center; border-radius: 50%; color: #10251b; background: #66dda6; font-size: 14px; font-weight: 900; }
+    </style>
+  </head>
+  <body>
+    <main class="canvas">
+      <div class="copy">
+        <div class="badge"><span class="dot"></span> PRIVATE · LOCAL · FOCUSED</div>
+        <h1>Your YouTube Mix.<br><span>Just the covers.</span></h1>
+        <p>Automatically hide originals and skip uncertain videos—without an API key or sending your listening data anywhere.</p>
+      </div>
+      <section class="panel" aria-label="Stylized extension preview">
+        <div class="panel-head"><div class="icon">▶</div><h2>Covers Only</h2><div class="toggle"></div></div>
+        <div class="track"><div class="thumb"></div><div><div class="title"></div><div class="sub"></div></div><div class="check">✓</div></div>
+        <div class="track"><div class="thumb"></div><div><div class="title"></div><div class="sub"></div></div><div class="check">✓</div></div>
+        <div class="track"><div class="thumb"></div><div><div class="title"></div><div class="sub"></div></div><div class="check">✓</div></div>
+        <div class="track"><div class="thumb"></div><div><div class="title"></div><div class="sub"></div></div><div class="check">✓</div></div>
+      </section>
+    </main>
+  </body>
+</html>

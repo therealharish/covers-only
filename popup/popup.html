@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Covers Only</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div class="brand-mark" aria-hidden="true"><span>▶</span></div>
+        <div class="heading">
+          <p class="eyebrow">YOUTUBE MIX</p>
+          <h1>Covers Only</h1>
+        </div>
+        <label class="switch" aria-label="Enable Covers Only">
+          <input id="enabled" type="checkbox">
+          <span class="switch-track"><span class="switch-thumb"></span></span>
+        </label>
+      </header>
+
+      <section class="status-card" aria-live="polite">
+        <div class="status-line">
+          <span id="verdict-dot" class="verdict-dot" data-verdict="idle"></span>
+          <span id="verdict-label">Checking this tab…</span>
+        </div>
+        <p id="current-title" class="current-title">Open a YouTube Mix to begin.</p>
+        <p id="reason" class="reason"></p>
+        <div class="actions">
+          <button id="allow" class="button button-allow" type="button" disabled>Always allow</button>
+          <button id="block" class="button button-block" type="button" disabled>Always block</button>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Session counts">
+        <div><strong id="played-count">0</strong><span>played</span></div>
+        <div><strong id="hidden-count">0</strong><span>hidden</span></div>
+        <div><strong id="skipped-count">0</strong><span>skipped</span></div>
+      </section>
+
+      <details class="settings-panel">
+        <summary>Playback & detection settings</summary>
+        <label class="setting-row" for="prefer-fresh">
+          <span><strong>Prefer fresh covers</strong><small>Skip covers played recently across synced Chrome browsers.</small></span>
+          <input id="prefer-fresh" type="checkbox">
+        </label>
+        <label class="days-field" for="novelty-days">
+          Avoid covers heard in the last
+          <input id="novelty-days" type="number" min="1" max="30" step="1">
+          days
+        </label>
+        <label class="setting-row" for="keep-music-going">
+          <span><strong>Keep music going</strong><small>When fresh covers run out, play the least-recent cover and resume discovery afterward.</small></span>
+          <input id="keep-music-going" type="checkbox">
+        </label>
+        <label for="positive-keywords">Extra include keywords</label>
+        <textarea id="positive-keywords" rows="2" placeholder="one per line, e.g. bedroom cover"></textarea>
+        <label for="negative-keywords">Extra exclude keywords</label>
+        <textarea id="negative-keywords" rows="2" placeholder="one per line, e.g. analysis"></textarea>
+        <div class="settings-actions">
+          <button id="save-settings" class="button button-primary" type="button">Save settings</button>
+          <div class="clear-actions">
+            <button id="clear-history" class="text-button" type="button">Clear listening history</button>
+            <button id="clear-overrides" class="text-button" type="button">Clear video decisions</button>
+          </div>
+        </div>
+        <p id="save-message" class="save-message" role="status"></p>
+      </details>
+
+      <p class="privacy-note">Preferences and recent video IDs sync through Chrome. No developer server or analytics.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Covers Only screenshot</title>
+    <link rel="stylesheet" href="../popup/popup.css">
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 1280px; height: 800px; margin: 0; overflow: hidden; }
+      body { width: 1280px; background: #0d0e12; }
+      .scene { display: flex; width: 100%; height: 100%; align-items: center; gap: 68px; padding: 64px 76px; background: radial-gradient(circle at 84% 12%, rgba(255,70,92,.19), transparent 33%), linear-gradient(135deg,#111219,#0b0c10); }
+      .context { flex: 1; min-width: 0; }
+      .context .label { color: #ff6b68; font-size: 13px; font-weight: 800; letter-spacing: .16em; }
+      .context h2 { max-width: 610px; margin: 20px 0 18px; color: white; font-size: 57px; line-height: 1.02; letter-spacing: -.05em; }
+      .context > p { max-width: 570px; color: #a9aeba; font-size: 20px; line-height: 1.5; }
+      .mix { margin-top: 34px; padding: 16px; border: 1px solid rgba(255,255,255,.08); border-radius: 18px; background: rgba(255,255,255,.03); }
+      .mix-row { display: grid; grid-template-columns: 76px 1fr 28px; align-items: center; gap: 13px; padding: 9px; }
+      .mix-row + .mix-row { border-top: 1px solid rgba(255,255,255,.06); }
+      .cover-art { height: 47px; border-radius: 9px; background: linear-gradient(135deg,#5a3d61,#cc6672); }
+      .mix-row:nth-child(2) .cover-art { background: linear-gradient(135deg,#314d48,#6ca78d); }
+      .mix-row:nth-child(3) .cover-art { background: linear-gradient(135deg,#53412f,#b78b5e); }
+      .mix-row strong { display: block; color: #f2f3f6; font-size: 13px; }
+      .mix-row small { color: #7f8490; }
+      .ok { display: grid; width: 25px; height: 25px; place-items: center; border-radius: 50%; color: #0e2318; background: #66dda6; font-weight: 900; }
+      .extension { flex: none; width: 380px; border: 1px solid rgba(255,255,255,.11); border-radius: 22px; overflow: hidden; box-shadow: 0 34px 100px rgba(0,0,0,.45); }
+      .extension .shell { width: 380px; }
+    </style>
+  </head>
+  <body>
+    <main class="scene">
+      <section class="context">
+        <div class="label">COVERS-ONLY PLAYBACK</div>
+        <h2>Keep the performances. Lose the playlist drift.</h2>
+        <p>The extension checks each Mix entry locally, keeps confident musical covers, and skips everything else.</p>
+        <div class="mix">
+          <div class="mix-row"><div class="cover-art"></div><div><strong>The One That Got Away — Cover</strong><small>Joy Ciarra</small></div><div class="ok">✓</div></div>
+          <div class="mix-row"><div class="cover-art"></div><div><strong>Mast Magan | Anumita Nadesan</strong><small>Performer attribution found</small></div><div class="ok">✓</div></div>
+          <div class="mix-row"><div class="cover-art"></div><div><strong>Arz Kiya Hai — cover by hvp.music</strong><small>Strong cover signal</small></div><div class="ok">✓</div></div>
+        </div>
+      </section>
+      <section class="extension shell">
+        <header class="hero"><div class="brand-mark"><span>▶</span></div><div class="heading"><p class="eyebrow">YOUTUBE MIX</p><h1>Covers Only</h1></div><label class="switch"><input type="checkbox" checked><span class="switch-track"><span class="switch-thumb"></span></span></label></header>
+        <section class="status-card"><div class="status-line"><span class="verdict-dot" data-verdict="accepted"></span><span>Playing a confident cover</span></div><p class="current-title">The One That Got Away — Katy Perry (Cover)</p><p class="reason">Strong cover signal: “cover”</p><div class="actions"><button class="button button-allow">Always allow</button><button class="button button-block">Always block</button></div></section>
+        <section class="stats"><div><strong>7</strong><span>played</span></div><div><strong>11</strong><span>hidden</span></div><div><strong>4</strong><span>skipped</span></div></section>
+        <details class="settings-panel"><summary>Detection settings</summary></details>
+        <p class="privacy-note">Runs locally. No account access, API key, or data upload.</p>
+      </section>
+    </main>
+  </body>
+</html>
