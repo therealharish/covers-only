@@ -53,3 +53,11 @@ YouTube does not expose a definitive cover-song flag, so false positives and fal
 The `store-assets/` directory contains listing copy, screenshots, promotional artwork, and a privacy page. Publication still requires a Chrome Web Store developer account and review.
 
 For seamless use across systems, publish the ZIP once in the Chrome Web Store, install it under the same synced Chrome profile everywhere, and upload a higher manifest version for each release. Chrome handles extension updates automatically after store approval.
+
+## Hosted resources
+
+- [Privacy policy](https://therealharish.github.io/covers-only/)
+- [GitHub Releases](https://github.com/therealharish/covers-only/releases)
+- [Chrome Web Store listing materials](store-assets/LISTING.md)
+
+The release workflow builds a ZIP whenever a `v*` tag is pushed. GitHub Releases are useful for testing and source distribution, but Chrome does not automatically install or update a normal consumer extension from GitHub.
