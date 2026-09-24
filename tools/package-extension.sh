@@ -12,6 +12,6 @@ cp -R "$ROOT/src" "$ROOT/popup" "$STAGE/"
 cp -R "$ROOT/assets/icons" "$STAGE/assets/icons"
 
 cd "$STAGE"
-zip -q -r "$DIST/covers-only-youtube-mix-1.1.0.zip" .
+zip -q -r "$DIST/covers-only-youtube-mix-1.1.1.zip" .
 
-echo "Created $DIST/covers-only-youtube-mix-1.1.0.zip"
+echo "Created $DIST/covers-only-youtube-mix-1.1.1.zip"

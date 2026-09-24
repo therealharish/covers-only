@@ -1,6 +1,6 @@
 {
   "name": "covers-only-youtube-mix",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "description": "Store-ready Chrome extension that keeps YouTube Mix playback focused on covers.",
   "scripts": {

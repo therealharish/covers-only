@@ -211,6 +211,7 @@
       cancelPendingSkip();
       currentVideoId = metadata.videoId;
       lastSkippedVideoId = '';
+      lastAcceptedVideoId = '';
       stoppedForExhaustion = false;
       allowedCurrentVideoId = fallbackVideoId === metadata.videoId ? metadata.videoId : '';
       if (fallbackVideoId !== metadata.videoId) fallbackVideoId = '';
@@ -328,7 +329,7 @@
       .map((row) => {
         const metadata = readRowMetadata(row);
         const link = row.querySelector('a#wc-endpoint, a.yt-simple-endpoint');
-        return { ...metadata, href: link?.href || '' };
+        return { ...metadata, href: link?.href || '', linkElement: link };
       })
       .filter(
         (candidate) =>
@@ -357,7 +358,9 @@
       });
     showBanner('No fresh covers found. Playing the least-recent cover, then discovery will resume.', 'success');
     window.setTimeout(() => {
-      if (fallbackVideoId === candidate.videoId) location.assign(candidate.href);
+      if (fallbackVideoId === candidate.videoId && candidate.linkElement?.isConnected) {
+        candidate.linkElement.click();
+      }
     }, 450);
     return true;
   }
